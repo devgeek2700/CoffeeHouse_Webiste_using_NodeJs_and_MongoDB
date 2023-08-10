@@ -60,5 +60,31 @@ Before you begin, ensure you have the following installed:
 
 5. Open your web browser and go to http://localhost:4000 to access the coffee website.
 
+
+## Register page
+
+![App Screenshot](https://github.com/devgeek2700/CoffeeHouse_Webiste_using_NodeJs_and_MongoDB/blob/master/public/Output/register.png?raw=true)
+
+## Login page
+
+![App Screenshot](https://github.com/devgeek2700/CoffeeHouse_Webiste_using_NodeJs_and_MongoDB/blob/master/public/Output/login.png?raw=true)
+ 
+## Home Page
+
+![App Screenshot](https://github.com/devgeek2700/CoffeeHouse_Webiste_using_NodeJs_and_MongoDB/blob/master/public/Output/home.png?raw=true)
+
+## Product page
+
+![App Screenshot](https://github.com/devgeek2700/CoffeeHouse_Webiste_using_NodeJs_and_MongoDB/blob/master/public/Output/product.png?raw=true)
+
+## Cart Page
+
+![App Screenshot](https://github.com/devgeek2700/CoffeeHouse_Webiste_using_NodeJs_and_MongoDB/blob/master/public/Output/cart.png?raw=true)
+
+## Billing Ppage
+
+![App Screenshot](https://github.com/devgeek2700/CoffeeHouse_Webiste_using_NodeJs_and_MongoDB/blob/master/public/Output/bill.png?raw=true)
+
+
 ## Contributing
 Contributions are welcome! Please fork the repository and create a pull request with your suggested changes. Make sure to follow the existing coding style and include relevant documentation.
