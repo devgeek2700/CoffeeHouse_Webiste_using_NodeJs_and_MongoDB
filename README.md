@@ -39,3 +39,14 @@ Before you begin, ensure you have the following installed:
 
    ```bash
    git@github.com:devgeek2700/CoffeeHouse_Webiste_using_NodeJs_and_MongoDB.git
+   
+2. Install the dependencies:
+    ```bash
+   npm install
+
+3. Rename .env.example to .env and update the MongoDB connection URI and other environment variables as needed.
+4. Start the application:
+      ```bash
+   npm run dev
+
+5. Open your web browser and go to http://localhost:4000 to access the coffee website. 
