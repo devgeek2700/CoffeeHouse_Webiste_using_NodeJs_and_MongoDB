@@ -1,24 +1,19 @@
 # CoffeeHouse_Webiste_using_NodeJs_and_MongoDB
 
 
-I have developed a dynamic and engaging coffee website using a robust tech stack comprising Node.js, Express.js, and MongoDB. This web application provides an immersive platform for coffee enthusiasts to explore a wide range of coffee products. Leveraging the power of Node.js and Express.js, the website offers seamless navigation, user registration, and authentication functionalities. MongoDB serves as the backend database, ensuring efficient data storage and retrieval for user profiles. With its user-friendly interface and responsive design, the website caters to both desktop and mobile users. Whether you're browsing through aromatic coffee blends or cart for a smooth experience, the website offers an enjoyable journey for coffee lovers. 
+I have developed a dynamic and engaging coffee website using a robust tech stack comprising Node.js, Express.js, and MongoDB. This web application provides an immersive platform for coffee enthusiasts to explore a wide range of coffee products. Leveraging the power of Node.js and Express.js, the website offers seamless navigation, user registration, and authentication functionalities. MongoDB serves as the backend database, ensuring efficient data storage and retrieval for user profiles. With its user-friendly interface and responsive design, the website caters to both desktop and mobile users. Whether you're browsing through aromatic coffee blends or view cart for a smooth experience, the website offers an enjoyable journey for coffee lovers. 
 
-## Table of Contents
+## Usage
 
-- [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
+- Register a new user account or log in using existing credentials.
+- Browse the available coffee products and add them to your cart.
+- View your cart, and proceed to checkout.
 
 ## Features
 
 - User registration and authentication.
 - Browse different types of coffee products.
-- See products in the cart and place orders.
+- View products in the cart and place orders.
 - Integration with MongoDB for storing user data.
 - Responsive design for mobile and desktop users.
 
@@ -32,6 +27,20 @@ Before you begin, ensure you have the following installed:
 - Express.js: [Download and Install Express.js](https://www.npmjs.com/package/express)
 - Mongoose.js: [Download and Install Mongoose.js](https://www.npmjs.com/package/mongoose)
 - MongoDB: [Download and Install MongoDB](https://www.mongodb.com/try/download/community)
+
+## Technologies Used
+- Node.js
+- Express.js
+- MongoDB
+- HTML/CSS
+- Bootstrap (for styling)
+- jsonwebtoken (for authentication)
+- hbs (Embedded JavaScript) templates
+- Bcryptjs (Encrypt password)
+- Cookie-parser
+- Dotenv
+- Mongoose
+- Nodemon
 
 ### Installation
 
