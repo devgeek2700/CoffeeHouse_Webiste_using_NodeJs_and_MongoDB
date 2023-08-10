@@ -58,4 +58,7 @@ Before you begin, ensure you have the following installed:
       ```bash
    npm run dev
 
-5. Open your web browser and go to http://localhost:4000 to access the coffee website. 
+5. Open your web browser and go to http://localhost:4000 to access the coffee website.
+
+## Contributing
+Contributions are welcome! Please fork the repository and create a pull request with your suggested changes. Make sure to follow the existing coding style and include relevant documentation.
