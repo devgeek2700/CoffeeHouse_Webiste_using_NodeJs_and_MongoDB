@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Add to Cart</title>
+    {{> headerlinks}}
+  </head>
+  <body>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 col-11 max-auto left_side">
+                <div class="row mt-5 gx-3">
+                    {{!-- left side --}}
+                    <div class="col-md-12 col-lg-8 col-11 mx-auto main_cart mb-lg-0 mb-5 shadow ">
+                        {{!-- card-1 --}}
+                        <div class="card p-4">
+                            <h2 class="py-4 font-weight-bold cartitemcount">Cart (4 items)</h2>
+                            <div class="row">
+                                {{!-- Images --}}
+                                <div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center
+                                align-items-center shadow product_img">
+                                    <img src="Images/cart1.webp" class="img-fluid">
+                                </div>
+
+                                {{!-- Card product details --}}
+                                <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                                    <div class="row">
+                                        {{!-- products_name --}}
+                                        <div class="col-6 card-title">
+                                            <h1 class="mb-4 product_name">Mocha pe Chauka Premium Instant Coffee 100gms</h1>
+                                            <p class="mb-2 subname">Flavour: Mocha</p>
+                                            <p class="mb-2 subname">Size: 100 Gms</p>
+                                            <p class="mb-3 subname">Ingredients: 98% Arabica 2% Robusta</p>
+                                        </div>
+
+                                        {{!-- products_quantity --}}
+                                        <div class="col-6">
+                                            <ul class="pagination justify-content-end set_quant">
+                                                <li class="page-item"><button class="page-link" onclick="decrement('txetbox', 'priceitem')"><i class="fa-solid fa-minus"></i></button></li>
+                                                <li class="page-item"><input type="text"  class="page-link" name="" value="1" id="txetbox"></button></li>
+                                                <li class="page-item"><button class="page-link"  onclick="increment('txetbox', 'priceitem')"><i class="fa-solid fa-plus"></i></button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    {{!--  Remove and price --}}
+                                    <div class="row">
+                                        <div class="col-8 d-flex justify-content-between remove_wish">
+                                            <p class="subname"><i class="fa-solid fa-trash"></i>REMOVE ITEM</p>
+                                            <p class="subname"><i class="fa-solid fa-heart" id= "heartBtn"></i>WISHLIST</p>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-end price_box">
+                                            <h3 class="price_txt">Rs. <span id="priceitem">699.00</span></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{!-- card-2 --}}
+                        <div class="card p-4">
+                            <div class="row">
+                                {{!-- Images --}}
+                                <div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center
+                                align-items-center shadow product_img">
+                                    <img src="Images/prd7.webp" class="img-fluid">
+                                </div>
+
+                                {{!-- Card product details --}}
+                                <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                                    <div class="row">
+                                        {{!-- products_name --}}
+                                        <div class="col-6 card-title">
+                                            <h1 class="mb-4 product_name">Pyaarbhari Chocolate Raspberry Premium Instant Coffee 100gms</h1>
+                                            <p class="mb-2 subname">Flavour: Chocolate</p>
+                                            <p class="mb-2 subname">Size: 100 Gms</p>
+                                            <p class="mb-3 subname">Ingredients: 98% Arabica 2% Robusta</p>
+                                        </div>
+
+                                        {{!-- products_quantity --}}
+                                        <div class="col-6">
+                                            <ul class="pagination justify-content-end set_quant">
+                                                <li class="page-item"><button class="page-link" onclick="decrement('txetbox', 'priceitem1')"><i class="fa-solid fa-minus"></i></button></li>
+                                                <li class="page-item"><input type="text"  class="page-link" name="" value="1" id="txetbox1"></button></li>
+                                                <li class="page-item"><button class="page-link"  onclick="increment('txetbox1', 'priceitem1')"><i class="fa-solid fa-plus"></i></button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    {{!--  Remove and price --}}
+                                    <div class="row">
+                                        <div class="col-8 d-flex justify-content-between remove_wish">
+                                            <p class="subname"><i class="fa-solid fa-trash"></i>REMOVE ITEM</p>
+                                            <p class="subname"><i class="fa-solid fa-heart" id= "heartBtn1"></i>WISHLIST</p>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-end price_box">
+                                            <h3 class="price_txt">Rs. <span id="priceitem1">469.00</span></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{!-- card-3 --}}
+                        <div class="card p-4">
+                            <div class="row">
+                                {{!-- Images --}}
+                                <div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center
+                                align-items-center shadow product_img">
+                                    <img src="Images/prd6.webp" class="img-fluid">
+                                </div>
+
+                                {{!-- Card product details --}}
+                                <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                                    <div class="row">
+                                        {{!-- products_name --}}
+                                        <div class="col-6 card-title">
+                                            <h1 class="mb-4 product_name">Keep Calm with KACCHA AAM Premium Instant Coffee | Limited Edition</h1>
+                                            <p class="mb-2 subname">Flavour: KACCHA AAM</p>
+                                            <p class="mb-2 subname">Size: 100 Gms</p>
+                                            <p class="mb-3 subname">Ingredients: 98% Arabica 2% Robusta</p>
+                                        </div>
+
+                                        {{!-- products_quantity --}}
+                                        <div class="col-6">
+                                            <ul class="pagination justify-content-end set_quant">
+                                                <li class="page-item"><button class="page-link" onclick="decrement('txetbox2', 'priceitem2')"><i class="fa-solid fa-minus"></i></button></li>
+                                                <li class="page-item"><input type="text"  class="page-link" name="" value="1" id="txetbox2"></button></li>
+                                                <li class="page-item"><button class="page-link"  onclick="increment('txetbox2', 'priceitem2')"><i class="fa-solid fa-plus"></i></button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    {{!--  Remove and price --}}
+                                    <div class="row">
+                                        <div class="col-8 d-flex justify-content-between remove_wish">
+                                            <p class="subname"><i class="fa-solid fa-trash"></i>REMOVE ITEM</p>
+                                            <p class="subname"><i class="fa-solid fa-heart" id= "heartBtn2"></i>WISHLIST</p>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-end price_box">
+                                            <h3 class="price_txt">Rs. <span id="priceitem2">599.00</span></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{!-- card-4 --}}
+                        <div class="card p-4">
+                            <div class="row">
+                                {{!-- Images --}}
+                                <div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center
+                                align-items-center shadow product_img">
+                                    <img src="Images/prd5.webp" class="img-fluid">
+                                </div>
+
+                                {{!-- Card product details --}}
+                                <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                                    <div class="row">
+                                        {{!-- products_name --}}
+                                        <div class="col-6 card-title">
+                                            <h1 class="mb-4 product_name">NutKhat Hazelnut Premium Instant Coffee</h1>
+                                            <p class="mb-2 subname">Flavour: Hazelnut</p>
+                                            <p class="mb-2 subname">Size: 100 Gms</p>
+                                            <p class="mb-3 subname">Ingredients: 98% Arabica 2% Robusta</p>
+                                        </div>
+
+                                        {{!-- products_quantity --}}
+                                        <div class="col-6">
+                                            <ul class="pagination justify-content-end set_quant">
+                                                <li class="page-item"><button class="page-link" onclick="decrement('txetbox3', 'priceitem3')"><i class="fa-solid fa-minus"></i></button></li>
+                                                <li class="page-item"><input type="text"  class="page-link" name="" value="1" id="txetbox3"></button></li>
+                                                <li class="page-item"><button class="page-link"  onclick="increment('txetbox3', 'priceitem3')"><i class="fa-solid fa-plus"></i></button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    {{!--  Remove and price --}}
+                                    <div class="row">
+                                        <div class="col-8 d-flex justify-content-between remove_wish">
+                                            <p class="subname"><i class="fa-solid fa-trash "></i>REMOVE ITEM</p>
+                                            <p class="subname"><i class="fa-solid fa-heart" id= "heartBtn3"></i>WISHLIST</p>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-end price_box">
+                                            <h3 class="price_txt">Rs. <span id="priceitem3">399.00</span></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    {{!-- Right side --}}
+                    <div class="col-md-12 col-lg-4 col-11 mx-auto mt-lg-0 mt-md-5">
+                        <div class="right_side p-3 shadow bg-white">
+                            <h2 class="product_name mb-5">The Total Amount Of</h2>
+                        <div class="price_indiv d-flex justify-content-between">
+                            <p class="subname">Product amount</p>
+                            <p class="tot_price">Rs. <span id="tot_diff_price">2166.00</span></p>
+                        </div>
+                        <div class="price_indiv d-flex justify-content-between">
+                            <p class="subname">Shipping Charge</p>
+                            <p class="tot_price">Rs. <span id="shipping_charge">50.0</span></p>
+                        </div>
+                      <hr />
+                      <div class="total-amt d-flex justify-content-between font-weight-bold">
+                        <p  class="subname">The total amount of (including VAT)</p>
+                        <p class="price_txt">Rs. <span id="total_cart_amt">2216.00</span></p>
+                    </div>
+                        <a href="/BuyOrder"><button class="btn btn-primary text-uppercase cartBtn">Checkout</button></a>
+                    </div>
+                    <!-- discount code part -->
+                    <div class="discount_code mt-3 shadow">
+                    <div class="card">
+                    <div class="card-body">
+                       <a class="d-flex justify-content-between subname1" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample" onclick="ShowCoupon()">
+                        Add a discount code (optional)
+                        <span><i class="fas fa-chevron-down pt-1"></i></span>
+                       </a>
+                    <div class="collapse" id="collapseExample">
+                    <div class="mt-3">
+                        <input type="text" name="" id="discount_code1" class="form-control font-weight-bold" placeholder="Enter the discount code" id="myinputbox">
+                        <small id="error_trw" class="text-dark mt-3">code is Coffeehouse</small>
+                    </div>
+                        <button class="btn btn-primary btn-sm mt-3 applyBtn" onclick="discount_code()">Apply</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                   <!-- discount code ends -->
+                   <div class="mt-3 shadow p-3 bg-white">
+                     <div class="pt-4">
+                       <h5 class="mb-4 product_name">Expected delivery date</h5>
+                        <p class="subname1">July 30th 2023 - August 5th 2023</p>
+                     </div>
+                    </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <script src="Js/cart.js"></script>
+
+  </body>
+</html>

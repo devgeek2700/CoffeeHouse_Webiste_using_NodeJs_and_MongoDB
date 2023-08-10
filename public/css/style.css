@@ -1,0 +1,2746 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+:root {
+  --main-color: #e19f4e;
+  --black: #13131a;
+  --bg: #f9e0bb;
+  --border: 1rem solid rgba(255, 255, 255, 0.3);
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 5rem;
+}
+
+body {
+  background: var(--bg);
+}
+
+.heading {
+  text-align: center;
+  color: brown;
+  text-transform: capitalize;
+  padding-bottom: 3.5rem;
+  font-size: 4rem;
+  padding-top: 2rem;
+}
+
+.heading span {
+  text-transform: capitalize;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.9rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background: var(--main-color);
+  cursor: pointer;
+}
+
+.btn:hover {
+  letter-spacing: 0.2rem;
+  color: #fff;
+  background: var(--main-color);
+}
+
+/* ************************ NAVBAR ******************* */
+
+.header {
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 7%;
+  border-bottom: var(--border);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header .logo img {
+  width: 10rem;
+  height: 6rem;
+}
+
+.header .navbar a {
+  margin: 0 1rem;
+  font-size: 2rem;
+  color: rgb(128, 22, 22);
+  text-decoration: none;
+}
+
+.header .navbar a:hover {
+  color: var(--main-color);
+  border-bottom: 0.1rem solid var(--main-color);
+}
+
+.header .nav_icons {
+  display: flex;
+
+}
+
+.header .nav_icons div {
+  color: rgb(128, 22, 22);
+  cursor: pointer;
+  font-size: 2.5rem;
+  margin-left: 2rem;
+}
+
+.header .nav_icons #notif{
+  font-size: 1rem;
+  color: #0a0606;
+  background-color: orange;
+  width: 20px;
+  height: 10px;
+  border-radius: 50%;
+  padding: 0.5rem;
+  margin-left: -0.5rem;
+}
+
+
+
+.header .nav_icons div:hover {
+  color: var(--main-color);
+}
+
+#bar_btn {
+  display: none;
+}
+
+.header .search_form {
+  position: absolute;
+  top: 115%;
+  right: 7%;
+  background: #fff;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.header .search_form.active {
+  transform: scaleY(1);
+}
+
+.header .search_form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--black);
+  padding: 1rem;
+  text-transform: none;
+}
+
+.header .search_form label {
+  cursor: pointer;
+  font-size: 2.2rem;
+  margin-right: 1.5rem;
+  color: var(--black);
+  margin-left: 1.5rem;
+}
+
+.header .search_form label:hover {
+  color: var(--main-color);
+}
+
+#logoutBtn{
+  color: rgb(128, 22, 22);
+  text-decoration: none;
+}
+
+/* ********* cart **************** */
+
+.header .cart_container {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  height: calc(100vh - 9.5rem);
+  width: 35rem;
+  background: #fff;
+  padding: 0 1.5rem;
+}
+
+
+.header .cart_container.active {
+  right: 0;
+}
+
+.header .cart_container .cart_item {
+  position: relative;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header .cart_container .cart_item .fa-times {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--black);
+}
+
+.header .cart_container .cart_item .fa-times:hover {
+  color: var(--main-color);
+}
+
+.header .cart_container .cart_item img {
+  height: 10rem;
+}
+
+.header .cart_container .cart_item .content h3 {
+  font-size: 1.4rem;
+  color: var(--black);
+  padding-right: 1.8rem;
+  padding-bottom: 0.2rem;
+}
+.header .cart_container .cart_item .content p{
+  font-size: 1.5rem;
+  color: brown;
+  font-weight: bold;
+  padding-right: 1rem;
+  margin-top: -0.5rem;
+}
+
+.header .cart_container .cart_item .content span{
+  font-size: 1.3rem;
+  color: black;
+  font-weight: bold;
+  padding-right: 1.8rem;
+}
+
+.header .cart_container .cart_item .content .price {
+  font-size: 1.5rem;
+  color: red;
+  margin-top: -0.5rem;
+}
+
+.header .cart_container .btn {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(128, 22, 22);
+}
+
+.header .cart_container #checkBtn{
+  background-color: var(--main-color)
+}
+
+/* ************************ HOME PAGE ******************* */
+
+.ban_offer {
+  width: 100%;
+  height: 6vh;
+  background-color: #f8b767;
+}
+
+.ban_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.ban_row .blk_1 {
+  font-size: 22px;
+  color: brown;
+}
+
+/* ************************ ABOUT PAGE ******************* */
+
+.About .row {
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  flex-wrap: wrap;
+}
+
+.About .row .abt_img {
+  flex: 1 1 45rem;
+}
+
+.About .row .abt_img img {
+  width: 100%;
+  border-radius: 20px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.About .row .content {
+  flex: 1 1 45rem;
+  padding: 2rem;
+}
+
+.About .row .content h3 {
+  font-size: 4rem;
+  color: rgb(111, 26, 26);
+}
+
+.About .row .content p {
+  font-size: 1.6rem;
+  color: rgb(106, 70, 70);
+  padding: 1rem 0;
+  line-height: 1.8;
+}
+
+/* ************************ MENU PAGE ******************* */
+
+.Menu .row {
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  flex-wrap: wrap;
+}
+
+.Menu .row .menu_img {
+  flex: 1 1 45rem;
+}
+
+.Menu .row .menu_img iframe {
+  width: 100%;
+  border-radius: 20px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.Menu .row .content {
+  flex: 1 1 45rem;
+  padding: 2rem;
+}
+
+.Menu .row .menu_img1 {
+  flex: 1 1 45rem;
+}
+
+.Menu .row .menu_img1 img {
+  width: 99%;
+  height: 200px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.Menu .row .menu_img1 .menu_img_box {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Menu .row .menu_img1 .menu_img_box img {
+  width: 50%;
+  height: 200px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+
+/* ************************ PRODUCTS PAGE ******************* */
+
+.products .box_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.products .box_container .box {
+  text-align: center;
+  border: var(--border);
+  padding: 2rem;
+  background: #fff;
+  border-radius: 20px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.products .box_container .box .prd_icons a {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  border: var(--border);
+  color: brown;
+  margin: 0.3rem;
+}
+
+.products .box_container .box .prd_icons a:hover {
+  background: var(--main-color);
+}
+
+.products .box_container .box .prd_image {
+  padding: 2.5rem 0;
+}
+#heartBtnh1,#heartBtnh2,#heartBtnh3, #heartBtnh4, #heartBtnh5,#heartBtnh6,#heartBtnh7,#heartBtnh8{
+  font-size: 2rem;
+}
+
+.products .box_container .box .prd_image img {
+  height: 25rem;
+  width: 25rem;
+}
+
+.products .box_container .box .content h3 {
+  color: brown;
+  font-size: 2.5rem;
+}
+
+.products .box_container .box .content .stars {
+  padding: 1.5rem;
+}
+
+.products .box_container .box .content .stars i {
+  font-size: 2rem;
+  color: brown;
+}
+
+.products .box_container .box .content .price {
+  color: black;
+  font-size: 2.5rem;
+  color: brown;
+}
+
+.products .box_container .box .content .price span {
+  text-decoration: line-through;
+  color: rgb(17, 7, 7);
+  font-weight: light;
+  font-size: 2rem;
+}
+
+/* ************************ REVIEWS PAGE ******************* */
+
+.reviews .box_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.reviews .box_container .box {
+  border: var(--border);
+  text-align: center;
+  padding: 3rem 2rem;
+  background: brown;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  border-radius: 20px;
+}
+
+.reviews .box_container .box .quote {
+  width: 7rem;
+  height: 7rem;
+}
+
+.reviews .box_container .box p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #ccc;
+  padding: 2rem 0;
+}
+
+.reviews .box_container .box .user {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.reviews .box_container .box h3 {
+  padding: 1rem 0;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.reviews .box_container .box .stars i {
+  font-size: 2rem;
+  color: var(--main-color);
+}
+
+/* ************************ BLOG PAGE ******************* */
+
+.blog .box_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.blog .box_container .box {
+  text-align: center;
+  border: var(--border);
+  background: #fff;
+  border-radius: 20px;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.blog .box_container .box .blg_img {
+  padding: 0 0;
+}
+
+.blog .box_container .box .blg_img img {
+  width: 100%;
+  height: 450px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.blog .box_container .box .content h3 {
+  color: brown;
+  font-size: 2.5rem;
+  padding: 2rem;
+}
+
+.blog .box_container .box .content .para {
+  padding: 0 2rem;
+}
+
+.blog .box_container .box .content .para p {
+  font-size: 1.5rem;
+  color: var(--main-color);
+}
+
+.blog .box_container .box .content .datenow i {
+  font-size: 2rem;
+  color: brown;
+  margin-right: 2rem;
+}
+
+.blog .box_container .box .content .datenow span {
+  font-size: 2rem;
+  color: brown;
+}
+
+/* ************************ DELVERY PAGE ******************* */
+
+.Delivery .box_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.Delivery .box_container .box {
+  text-align: center;
+  border-radius: 20px;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.Delivery .box_container .box .content {
+  padding-top: 2rem;
+}
+
+.Delivery .box_container .box .content i {
+  font-size: 4rem;
+  color: rgb(128, 22, 22);
+  padding-bottom: 2rem;
+}
+
+.Delivery .box_container .box .content h3 {
+  font-size: 3rem;
+  color: rgb(128, 22, 22);
+}
+
+.Delivery .box_container .box .content p {
+  font-size: 2rem;
+  color: rgb(170, 61, 61);
+}
+
+/* ************************ FOOTER PAGE ******************* */
+
+
+
+.footer-distributed {
+    background-color: rgb(128, 22, 22);;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+    width: 30%;
+}
+
+.footer-distributed h3 {
+    color: #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+}
+
+
+.footer-distributed h3 span {
+    color: #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: rgb(138, 83, 83);
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: #e0ac1c;
+    text-decoration: none;
+    ;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+    width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: rgb(138, 83, 83);
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 5px;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+    background-color: rgb(148, 103, 103);;
+}
+
+.footer-links a:hover {
+    color: #e19f4e;
+}
+
+
+
+
+
+/* ************************ BUYCOFFEE PAGE ******************* */
+.ad_container{
+  width: 100%;
+  height: 10vh;
+  margin-top: 10rem;
+}
+
+.wrapper {
+  max-width: 100%;
+  height: 10vh;
+  background-color: rgb(102, 36, 36);
+  overflow: hidden;
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  margin-left: 80rem;
+  animation: marquee 10s linear infinite;
+}
+
+.marquee p {
+  display: inline-block;
+  padding-top: 2rem;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.marquee p i{
+  display: inline-block;
+  font-size: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  color: #f4d19d;
+}
+
+ @keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-90%, 0, 0);
+  }
+} 
+
+
+
+
+
+ /* ********************* BUY SECTION ******************** */
+
+
+.Coffeebuy .box_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+  }
+
+  .Coffeebuy .box_container  #buycoffeeBOX{
+    /* background-color: #e01cc6; */
+    width: 100%;
+  }
+  
+.Coffeebuy .box_container .box {
+    text-align: center;
+    /* border: var(--border); */
+    border-radius: 20px;
+    margin-left: 2.5rem;
+    /* background-color: red; */
+    margin-right: 2.5rem;
+    padding: 2rem;
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .Coffeebuy .box_container .box .buymain_row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  /* ******* left side buy ************** */
+
+
+.Coffeebuy .box_container .box .left_box{
+    /* flex-basis: 50%; */
+    width: 50%;
+    /* background-color: #20f5ea; */
+  }
+  
+.Coffeebuy .box_container .box .left_box .buy_img{
+    width: 95%;
+    margin-top: 2rem;
+    height: 500px;
+    border-radius: 30px;
+}
+
+.Coffeebuy .box_container .box .left_box .l_img_box1{
+  width: 100%;
+  height: 300px;
+  /* background-color: #f3e80d; */
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Coffeebuy .box_container .box .left_box .l_img_box1 .ll_side_img{
+  width: 50%;
+  height: 290px;
+  /* background-color: pink; */
+}
+
+.Coffeebuy .box_container .box .left_box .l_img_box1 .lr_side_img{
+  width: 50%;
+  height: 290px;
+  /* background-color: rgb(39, 36, 222); */
+}
+
+.Coffeebuy .box_container .box .left_box .l_img_box1 .ll_side_img .buy1_img{
+  width: 95%;
+  height: 290px;
+  border-radius: 30px;
+}
+
+.Coffeebuy .box_container .box .left_box .l_img_box1 .lr_side_img .buy1_img{
+  width: 95%;
+  height: 290px;
+  border-radius: 30px;
+}
+
+
+/* ******* right side buy ************** */
+
+.Coffeebuy .box_container .box .right_box{
+    /* flex-basis: 50%; */
+    width: 50%;
+    /* background-color: #94eb75; */
+}
+
+.Coffeebuy .box_container .box .right_box .content{
+    padding: 2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content h3{
+    font-size: 4rem;
+    color: rgb(128, 22, 22);
+    font-weight: bolder;
+}
+
+.Coffeebuy .box_container .box .right_box .content .price p{
+    color: black;
+    font-size: 4rem;
+    color: red;
+}
+
+.Coffeebuy .box_container .box .right_box .content .price #cutprice { 
+    text-decoration: line-through;
+    color: rgb(102, 36, 36);
+    font-weight: light;
+    font-size: 3rem;
+    margin-left: 1.5rem;
+}
+   
+.Coffeebuy .box_container .box .right_box .content .price #offerdist{
+    width: 100px;
+    height: 20px;
+    background-color: red;
+    color: #fff;
+    font-size: 18px;
+    padding: 6px 6px;
+    border-radius: 10px;
+    margin-left: 2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .stars {
+    padding: 1.5rem;
+  }
+  
+.Coffeebuy .box_container .box .right_box .content .stars i {
+    font-size: 3rem;
+    color: brown;
+  }
+
+.Coffeebuy .box_container .box .right_box .content .stars span{
+    font-size: 1.5rem;
+    color: rgb(102, 36, 36);
+    margin-left: 1.5rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .place{
+    width: 90%;
+    height: 10vh;
+    background-color: #f4d19d;
+    margin-left: 4rem;
+    border-radius: 20px;
+}
+
+.Coffeebuy .box_container .box .right_box .content .place p{
+    font-size: 1.7rem;
+    color: rgb(102, 36, 36);
+    font-weight: bold;
+    padding-top: 2.2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .place i{
+    margin-right: 2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content p{
+    font-size: 2rem;
+    color: brown;
+    padding-top: 2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .flr_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Coffeebuy .box_container .box .right_box .content .flr_box .flr_txt{
+    width:150px;
+    height: 60px;
+    /* background-color: #f30d0d; */
+    border-radius: 20px;
+    border: 3px solid brown;
+
+}
+
+.Coffeebuy .box_container .box .right_box .content .flr_box a{
+    text-decoration: none;
+    font-size: 2rem;
+    padding-top: 1.5rem;
+    color: brown;
+}
+
+.Coffeebuy .box_container .box .right_box .content #selectflr{
+    border: 3px solid rgb(102, 36, 36);
+    color: rgb(102, 36, 36);
+}
+
+.Coffeebuy .box_container .box .right_box .content .flr_box .fa-minus{
+    margin-right: 2rem;
+    font-size: 2rem;
+    flex-basis: 30%;
+}
+
+.Coffeebuy .box_container .box .right_box .content .flr_box .fa-plus{
+    margin-left: 2rem;
+    flex-basis: 30%;
+    font-size: 2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .prd_btn_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.Coffeebuy .box_container .box .right_box .content .prd_btn_box #add2cart{
+    background-color:  rgb(102, 36, 36);
+    width: 300px;
+    height: 60px;
+    padding-top: 1rem;
+    font-size: 2.5rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .prd_btn_box #buy2btn{
+    background-color:red;
+    width: 300px;
+    height: 60px;
+    padding-top: 1rem;
+    font-size: 2.5rem;
+}
+.Coffeebuy .box_container .box .right_box .content .prd_btn_box #add2cart:hover{
+    background-color:  rgb(145, 36, 36);
+}
+
+.Coffeebuy .box_container .box .right_box .content .prd_btn_box #buy2btn:hover{
+    background-color:  rgb(252, 67, 67);
+}
+
+.Coffeebuy .box_container .box .right_box  .line_prd{
+    width: 95%;
+    height: 1px;
+    border-radius: 10px;
+    background-color: rgb(175, 94, 94);
+    margin-left: 2rem;
+}
+
+.Coffeebuy .box_container .box .right_box  .Mugfree{
+    width: 90%;
+    height: 10vh;
+    background-color: #f4d19d;
+    margin-left: 4rem;
+    border-radius: 20px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.Coffeebuy .box_container .box .right_box #lastfree{
+  margin-top: 1rem;
+}
+.Coffeebuy .box_container .box .right_box .Mugfree p{
+    font-size: 1.7rem;
+    color: rgb(102, 36, 36);
+    font-weight: bold;
+    padding-top: 1rem;
+}
+
+.Coffeebuy .box_container .box .right_box .Mugfree #nrm_txt{
+    color: brown;
+    font-size: 1.5rem;
+    font-weight: light;
+    margin-top: -2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .Mugfree i{
+    margin-right: 2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .details_box{
+  width: 90%;
+  height: 10vh;
+  /* background-color: #9ad1f8; */
+  margin-left: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol{
+  width: 100%;
+  height: 10vh;
+  /* background-color: #f89aae; */
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1{
+  width: 100%;
+  height: 10vh;
+  /* background-color: #9af8f8; */
+  z-index: -999;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1 p{
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(102, 36, 36);
+  margin-left: -18rem;
+}
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1 #parcup{
+  margin-left: -20rem;
+  padding-top: 2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1 #perCup{
+  margin-left: -11rem;
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1 .det_arrow{
+  margin-right: -18rem;
+  width: 30px;
+  height: 30px;
+  background-color: #f6cd90;
+  border-radius: 50%;
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1 #arrowcup{
+  margin-right: -20rem;
+}
+
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1 #percuparrow{
+  margin-right: -10.5rem;
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1 .det_arrow i{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(102, 36, 36);
+  padding-top: 1rem;
+}
+.Coffeebuy .box_container .box .right_box .details_box:hover .detcol .detrow1 .det_arrow{
+  background-color: rgb(102, 36, 36);
+}
+
+.Coffeebuy .box_container .box .right_box .details_box:hover .detcol .detrow1 .det_arrow i{
+  color: var(--bg);
+} 
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow2{
+  width: 43%;
+  height: 12vh;
+  background-color: brown;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 999;
+  justify-content: space-around;
+  display: none;
+  /* margin-left: -4rem; */
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow2 p{
+  font-size: 2rem;
+  font-weight: light;
+  color: #fff;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  text-align: left;
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow2 #paradesc{
+  font-size: 1.2rem;
+  font-weight: light;
+  color: #fff;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  text-align: left;
+}
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow2 #paradesc1{
+  font-size: 1.5rem;
+  font-weight: light;
+  color: #fff;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  text-align: left;
+}
+
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow2 #paradesc #bdesc{
+  color: var(--bg);
+  font-weight: bold;
+}
+
+.Coffeebuy .box_container .box .right_box .content #buyItwith{
+  font-size: 2rem;
+  color: brown;
+  padding: 0;
+}
+
+
+ /* ********************* ALL PRODUCTS SECTION ******************** */
+
+ .allproducts .allprod_conatiner {
+  width: 100%;
+  height: 30vh;
+}
+
+.allproducts .allprod_conatiner img{
+  width: 100%;
+  height: 100vh;
+  object-fit: contain;
+}
+
+#prodblog{
+  margin-top: 43rem;
+}
+
+#buyproducts{
+  margin-top: 2rem;
+}
+
+ /* ********************* BLOg PRODUCTS SECTION ******************** */
+
+
+ .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container .box {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  margin: 4rem;
+}
+
+.container .box:hover .imgBox {
+  transform: translate(-3.5rem, -3.5rem);
+}
+
+.container .box:hover .bcard_content {
+  transform: translate(3.5rem, 3.5rem);
+}
+
+.imgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  border-radius: 20px;
+}
+
+.imgBox img {
+  width: 30rem;
+  height: 30rem;
+  object-fit: cover;
+  resize: both;
+  border-radius: 20px;
+}
+
+.bcard_content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(102, 36, 36);;
+  z-index: 1;
+  align-items: flex-end;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+  border-radius: 20px;
+}
+
+.bcard_content h2 {
+  display: block;
+  font-size: 2rem;
+  color: #f4d19d;
+  font-weight: 500;
+  line-height: 2rem;
+  letter-spacing: 1px;
+}
+
+.bcard_content span {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+ /* ************************ REVIEWS BUY PAGE ******************* */ 
+
+ .buyreviews{
+  width: 100%;
+  height: 30vh;
+  /* background-color: greenyellow; */
+ }
+
+.buyreviews .rev_row{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.buyreviews  .rev_row  .txt_rev{
+  width: 33.33%;
+  height: 30vh;
+  /* background-color: pink; */
+  text-align: center;
+  border-right: 2px solid rgb(102, 36, 36);;
+  padding-top: 6rem;
+}
+
+.buyreviews  .rev_row  .txt_rev .stars{
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(102, 36, 36);
+}
+
+.buyreviews  .rev_row  .txt_rev .stars a{
+  /* text-decoration: none; */
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(102, 36, 36);
+  margin-right: 2rem;
+}
+
+.buyreviews  .rev_row  .txt_rev p{
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(102, 36, 36);
+}
+
+.buyreviews  .rev_row  .txt_rev  a{
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(102, 36, 36);
+  margin-top: -2rem;
+}
+
+.buyreviews  .rev_row  .txt_rev  a:hover{
+  color: brown;
+}
+
+.buyreviews  .rev_row  .stars_rev{
+  width: 33.33%;
+  height: 30vh;
+  /* background-color: orangered; */
+  border-right: 2px solid rgb(102, 36, 36);
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1{
+  display: flex;
+  align-items: center;
+  padding-top: 2.5rem;
+  margin-top: -3rem;
+  padding-left: 6rem;
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .stars{
+  margin-right: 2rem;
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .stars i{
+  font-size: 2rem;
+  color: rgb(102, 36, 36);
+}
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyMark{
+  background-color: #fff;
+  width: 40%;
+  height: 20px;
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyMark .marklineBuy{
+  width: 80%;
+  height: 20px;
+  background-color: rgb(102, 36, 36);
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyMark #star4{
+  width: 60%;
+  height: 20px;
+  background-color: rgb(102, 36, 36);
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyMark #star3{
+  width: 40%;
+  height: 20px;
+  background-color: rgb(102, 36, 36);
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyMark #star2{
+  width: 20%;
+  height: 20px;
+  background-color: rgb(102, 36, 36);
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyMark #star1{
+  width: 5%;
+  height: 20px;
+  background-color: rgb(102, 36, 36);
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyNum{
+  margin-left: 2rem;
+  padding-top: 1rem;
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyNum{
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(102, 36, 36);
+}
+
+.buyreviews  .rev_row  .msg_rev{
+  width: 33.33%;
+  height: 30vh;
+  /* background-color: blue; */
+  padding-top: 8rem;
+  padding-left: 9rem;
+}
+
+.buyreviews  .rev_row  .msg_rev #rev_btn{
+  width: 300px;
+  height: 50px;
+  font-size: 2rem;
+  background-color: rgb(102, 36, 36);
+}
+
+.buyreviews  .rev_row  .msg_rev #rev_btn:hover{
+  background-color: brown;
+}
+
+
+/* ******************************** ADD TO CART ******************************************************** */
+
+.left_side{
+  margin-left: 15rem;
+}
+
+.cartitemcount,
+.product_name{
+  color: rgb(102, 36, 36);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.subname{
+  color: brown;
+  font-size: 1.2rem;
+}
+
+.subname1{
+  color: brown;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.fa-heart,
+.fa-trash{
+  margin-right: 5px;
+  color: rgb(102, 36, 36);
+  font-size: 1.5rem;
+}
+
+.cartBtn{
+  background-color: rgb(102, 36, 36);
+  color: #fff;
+  border: 0;
+  text-decoration: none;
+}
+
+.cartBtn:hover{
+  background-color: brown;
+}
+
+.price_txt{
+  color: red;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.tot_price{
+  color: brown;
+  font-size: 1.5rem;
+}
+
+.page-link{
+  width: 45px;
+  height: 30px;
+  font-size: 2rem;
+  color: rgb(102, 36, 36);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.page-link:hover{
+  text-decoration: none;
+  color: rgb(102, 36, 36);
+  outline: none !important;
+}
+
+.page-link:focus{
+  box-shadow: none;
+}
+
+.page-item{
+  color: rgb(102, 36, 36);
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.page-item input{
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+/* Add A Discount Code */
+
+#collapseExample{
+  display: none;
+}
+
+#discount_code1{
+  height: 40px;
+  font-size: 1.5rem;
+  color: rgb(102, 36, 36);
+}
+
+#error_trw{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.applyBtn{
+  background-color: rgb(102, 36, 36);
+  color: #fff;
+  border: 0;
+  text-decoration: none;
+}
+
+.applyBtn:hover{
+  background-color: brown;
+}
+
+.liked{
+  color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ************************************************************* Responsive Design *************************************************************** */
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 1.5rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 1.5rem 2rem;
+  }
+
+  .Coffeebuy .box_container .box .buymain_row{
+    flex-direction: column;
+   }
+ 
+   /* Ad section */
+   .ad_container{
+     width: 100%;
+     height: 6vh;
+     margin-top: 10rem;
+   }
+
+   .marquee p {
+    display: inline-block;
+    padding-top: 0.5rem;
+    font-size: 2.5rem;
+    color: #fff;
+  }
+
+   /* ******************** buy coffee ******************* */
+   
+ 
+
+
+/* ********************* ALL PRODUCTS SECTION ******************** */
+
+.allproducts .allprod_conatiner {
+  width: 100%;
+  height: 30vh;
+  margin-top: -35rem;
+}
+
+
+ /* ********************* BLOg PRODUCTS SECTION ******************** */
+
+ .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: -10rem;
+}
+
+
+    /* ************************ BUY COFFEE PAGE ******************* */
+    .Coffeebuy .box_container {
+      /* background-color: #e01cb5; */
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+  .Coffeebuy .box_container .box {
+    margin-top: 4rem;
+    margin-left: -0.5rem;
+    border: 0;
+
+  }
+  .Coffeebuy .box_container  #buycoffeeBOX{
+    /* background-color: #e0ac1c; */
+    width: 100%;
+  }
+
+  .Coffeebuy .box_container .box .buymain_row{
+    flex-direction: column;
+   }
+
+    /* ******* left side buy ************** */
+
+
+.Coffeebuy .box_container .box .left_box{
+  width: 100%;
+  /* background-color: #20f5ea; */
+  margin-left: 0.5rem;
+}
+
+.Coffeebuy .box_container .box .left_box .buy_img{
+  height: 350px;
+}
+
+.Coffeebuy .box_container .box .left_box .l_img_box1{
+height: 200px;
+/* background-color: #f3e80d; */
+}
+
+.Coffeebuy .box_container .box .left_box .l_img_box1 .ll_side_img{
+height: 200px;
+/* background-color: pink; */
+}
+
+.Coffeebuy .box_container .box .left_box .l_img_box1 .lr_side_img{
+height: 200px;
+}
+
+.Coffeebuy .box_container .box .left_box .l_img_box1 .ll_side_img .buy1_img{
+height: 200px;
+}
+
+.Coffeebuy .box_container .box .left_box .l_img_box1 .lr_side_img .buy1_img{
+height: 200px;
+}
+
+
+
+/* ******* right side buy ************** */
+
+.Coffeebuy .box_container .box .right_box{
+  /* background-color: #94eb75; */
+  width: 100%;
+  margin-left: 0.5rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content h3{
+  font-size: 4rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .price p{
+  font-size: 3.5rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .price #cutprice { 
+  font-size: 3rem;
+  margin-left: 1.5rem;
+}
+ 
+.Coffeebuy .box_container .box .right_box .content .price #offerdist{
+  font-size: 18px;
+  padding: 4px 4px;
+}
+
+.Coffeebuy .box_container .box .right_box .content .stars i {
+  font-size: 3.5rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .stars span{
+  font-size: 2rem;
+  margin-left: 1.5rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .place{
+  width: 90%;
+  height: 8vh;
+  margin-left: 2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .place p{
+  font-size: 2.5rem;
+  padding-top: 1.5rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .flr_box{
+  flex-direction: row;
+}
+
+
+.Coffeebuy .box_container .box .right_box .content .flr_box .flr_txt{
+  width:160px;
+  height: 60px;
+  margin: 0.5rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .flr_box a{
+  font-size: 2.5rem;
+  padding-top: 1.5rem;
+}
+
+
+.Coffeebuy .box_container .box .right_box .content .flr_box .fa-minus{
+  margin-right: 2rem;
+  font-size: 2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .flr_box .fa-plus{
+  margin-left: 2rem;
+  font-size: 2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .prd_btn_box #add2cart{
+  width: 300px;
+  padding-top: 1.5rem;
+  font-size: 2.5rem;
+  margin: 0.5rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .prd_btn_box #buy2btn{
+  width: 290px;
+  padding-top: 1.5rem;
+  margin: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.Coffeebuy .box_container .box .right_box  .line_prd{
+  width: 90%;
+}
+
+.Coffeebuy .box_container .box .right_box  .Mugfree{
+  height: 10vh;
+  margin-left: 2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol{
+width: 100%;
+height: 10vh;
+/* background-color: #f89aae; */
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1{
+width: 100%;
+height: 10vh;
+/* background-color: #9af8f8; */
+z-index: -999;
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1 p{
+font-size: 2.5rem;
+font-weight: bold;
+color: rgb(102, 36, 36);
+margin-left: -10rem;
+}
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1 #parcup{
+margin-left: -12rem;
+padding-top: 2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1 #perCup{
+margin-left: -2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1 .det_arrow{
+margin-right: -10rem;
+width: 30px;
+height: 30px;
+background-color: #f6cd90;
+border-radius: 50%;
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1 #arrowcup{
+margin-right: -12rem;
+}
+
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1 #percuparrow{
+margin-right: -1rem;
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1 .det_arrow i{
+font-size: 1.5rem;
+font-weight: bold;
+color: rgb(102, 36, 36);
+padding-top: 1rem;
+}
+.Coffeebuy .box_container .box .right_box .details_box:hover .detcol .detrow1 .det_arrow{
+background-color: rgb(102, 36, 36);
+}
+
+.Coffeebuy .box_container .box .right_box .details_box:hover .detcol .detrow1 .det_arrow i{
+color: var(--bg);
+} 
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow2{
+width: 70%;
+height: 10vh;
+background-color: brown;
+display: flex;
+align-items: center;
+position: absolute;
+z-index: 999;
+justify-content: space-around;
+display: none;
+/* margin-left: -4rem; */
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow2 p{
+font-size: 2rem;
+font-weight: light;
+color: #fff;
+padding-left: 2rem;
+padding-top: 2rem;
+text-align: left;
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow2 #paradesc{
+font-size: 1rem;
+font-weight: light;
+color: #fff;
+padding-left: 2rem;
+padding-top: 1rem;
+text-align: left;
+}
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow2 #paradesc1{
+font-size: 1.2rem;
+font-weight: light;
+color: #fff;
+padding-left: 2rem;
+padding-top: 1.5rem;
+text-align: left;
+}
+
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow2 #paradesc #bdesc{
+color: var(--bg);
+font-weight: bold;
+}
+
+.Coffeebuy .box_container .box .right_box .content #buyItwith{
+font-size: 2rem;
+color: brown;
+padding: 0;
+margin-top: 2rem;
+}
+
+
+
+/* ********************* ALL PRODUCTS SECTION ******************** */
+
+.allproducts .allprod_conatiner {
+  width: 100%;
+  height: 30vh;
+  margin-top: -25rem;
+}
+
+
+ /* ********************* BLOg PRODUCTS SECTION ******************** */
+
+ .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: -10rem;
+}
+
+ /* ************************ REVIEWS BUY PAGE ******************* */ 
+ .buyreviews{
+  width: 100%;
+  height: 80vh;
+  /* background-color: greenyellow; */
+ }
+
+.buyreviews .rev_row{
+  flex-direction: column;
+}
+
+.buyreviews  .rev_row  .txt_rev{
+  width: 100%;
+  height: 30vh;
+  text-align: center;
+  border-bottom: 2px solid rgb(102, 36, 36);
+  /* background-color: hotpink; */
+  border-right: 0;
+  padding-top: 10rem;
+  }
+
+.buyreviews  .rev_row  .txt_rev .stars{
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(102, 36, 36);
+  margin-left: -10rem;
+
+}
+
+.buyreviews  .rev_row  .txt_rev .stars #outoff{
+  /* text-decoration: none; */
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(102, 36, 36);
+  /* margin-right: 2rem; */
+  margin-left: 1rem;
+}
+
+.buyreviews  .rev_row  .txt_rev p{
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(102, 36, 36);
+  margin-left: -4rem;
+}
+
+.buyreviews  .rev_row  .txt_rev  a{
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(102, 36, 36);
+  margin-top: -2rem;
+  margin-left: -3rem;
+
+}
+
+.buyreviews  .rev_row  .txt_rev  a:hover{
+  color: brown;
+}
+
+.buyreviews  .rev_row  .stars_rev{
+  width: 100%;
+  height: 30vh;
+  border-bottom: 2px solid rgb(102, 36, 36);
+  /* background-color: red; */
+  border-right: 0;
+  padding-top: 1.5rem;
+  padding-left: 15rem;
+}
+
+/* 2nd row */
+
+.buyreviews  .rev_row  .stars_rev .rev_row1{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 2.5rem;
+  margin-top: -3rem;
+  padding-left: 2rem;
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .stars{
+  margin-right: 2rem;
+  display: flex;
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .stars i{
+  font-size: 2rem;
+  color: rgb(102, 36, 36);
+}
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyMark{
+  background-color: #fff;
+  width: 40%;
+  height: 20px;
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyMark .marklineBuy{
+  width: 80%;
+  height: 20px;
+  background-color: rgb(102, 36, 36);
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyMark #star4{
+  width: 60%;
+  height: 20px;
+  background-color: rgb(102, 36, 36);
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyMark #star3{
+  width: 40%;
+  height: 20px;
+  background-color: rgb(102, 36, 36);
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyMark #star2{
+  width: 20%;
+  height: 20px;
+  background-color: rgb(102, 36, 36);
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyMark #star1{
+  width: 5%;
+  height: 20px;
+  background-color: rgb(102, 36, 36);
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyNum{
+  margin-left: 2rem;
+  padding-top: 1rem;
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyNum{
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(102, 36, 36);
+}
+
+.buyreviews  .rev_row  .msg_rev{
+  width: 100%;
+  height: 30vh;
+  /* background-color: blue; */
+  padding-top: 8rem;
+  margin-left: 25rem;
+}
+
+.buyreviews  .rev_row  .msg_rev #rev_btn{
+  width: 300px;
+  height: 50px;
+  font-size: 2rem;
+  background-color: rgb(102, 36, 36);
+  margin-left: 3rem;
+}
+
+.buyreviews  .rev_row  .msg_rev #rev_btn:hover{
+  background-color: brown;
+}
+
+#buyproducts{
+  margin-top: 2rem;
+}
+
+/* ******************************** ADD TO CART ******************************************************** */
+
+.left_side{
+  margin-left: 3rem;
+}
+ 
+ 
+
+
+
+
+
+
+
+
+
+ 
+}
+
+
+
+
+
+
+/* ************* MOBLIE ************* */
+
+
+@media (max-width: 991px) {
+  #bar_btn {
+    display: inline-block;
+  }
+
+  /* ************************ NAVBAR ******************* */
+
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: #fff;
+    width: 20rem;
+    height: calc(100vh - 9.5rem);
+  }
+
+  .header .navbar.active {
+    right: 0%;
+  }
+
+  .header .navbar a {
+    display: block;
+    margin: 1.5rem;
+    padding: 0.3rem;
+    font-size: 2.5rem;
+    color: var(--black);
+  }
+
+  .header .search_form {
+    width: 90%;
+    right: 2rem;
+  }
+  /* ************************ HOME PAGE ******************* */
+
+  .ban_img {
+    height: 400px;
+  }
+
+  .ban_offer {
+    height: 15vh;
+    padding: 5px;
+  }
+
+  .ban_row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .ban_img {
+    height: 300px;
+  }
+  .ban_offer {
+    height: 15vh;
+    padding: 15px;
+  }
+
+  .products .box_container .box {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .reviews .box_container .box {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+
+
+  /* ************************ AD PAGE ******************* */
+  .ad_container{
+    height: 6vh;
+    overflow-x: hidden;
+  }
+
+  .marquee p {
+    display: inline-block;
+    padding-top: 1rem;
+    font-size: 2rem;
+    color: #fff;
+  }
+  
+    /* ************************ BUY COFFEE PAGE ******************* */
+    .Coffeebuy .box_container {
+      /* background-color: #e01cb5; */
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+  .Coffeebuy .box_container .box {
+    margin-top: 4rem;
+    margin-left: -0.5rem;
+    border: 0;
+
+  }
+  /* .Coffeebuy .box_container  #buycoffeeBOX{
+    background-color: #e0ac1c;
+    width: 100%;
+  } */
+
+  .Coffeebuy .box_container .box .buymain_row{
+    flex-direction: column;
+   }
+
+    /* ******* left side buy ************** */
+
+
+.Coffeebuy .box_container .box .left_box{
+  width: 50%;
+  /* background-color: #20f5ea; */
+  margin-left: 0.5rem;
+}
+
+.Coffeebuy .box_container .box .left_box .buy_img{
+  height: 160px;
+}
+
+.Coffeebuy .box_container .box .left_box .l_img_box1{
+height: 160px;
+/* background-color: #f3e80d; */
+}
+
+.Coffeebuy .box_container .box .left_box .l_img_box1 .ll_side_img{
+height: 160px;
+/* background-color: pink; */
+}
+
+.Coffeebuy .box_container .box .left_box .l_img_box1 .lr_side_img{
+height: 160px;
+}
+
+.Coffeebuy .box_container .box .left_box .l_img_box1 .ll_side_img .buy1_img{
+height: 160px;
+}
+
+.Coffeebuy .box_container .box .left_box .l_img_box1 .lr_side_img .buy1_img{
+height: 160px;
+}
+
+
+
+/* ******* right side buy ************** */
+
+.Coffeebuy .box_container .box .right_box{
+  /* background-color: #94eb75; */
+  width: 50%;
+  margin-left: 0.5rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content h3{
+  font-size: 2.5rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .price p{
+  font-size: 2.5rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .price #cutprice { 
+  font-size: 2rem;
+  margin-left: 1.5rem;
+}
+ 
+.Coffeebuy .box_container .box .right_box .content .price #offerdist{
+  font-size: 14px;
+  padding: 4px 4px;
+}
+
+.Coffeebuy .box_container .box .right_box .content .stars i {
+  font-size: 2.5rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .stars span{
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .place{
+  width: 90%;
+  height: 8vh;
+  margin-left: 2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .place p{
+  font-size: 1.5rem;
+  padding-top: 2.2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .flr_box{
+  flex-direction: column;
+}
+
+
+.Coffeebuy .box_container .box .right_box .content .flr_box .flr_txt{
+  width:160px;
+  height: 60px;
+  margin: 0.5rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .flr_box a{
+  font-size: 2rem;
+  padding-top: 2rem;
+}
+
+
+.Coffeebuy .box_container .box .right_box .content .flr_box .fa-minus{
+  margin-right: 2rem;
+  font-size: 2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .flr_box .fa-plus{
+  margin-left: 2rem;
+  font-size: 2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .prd_btn_box #add2cart{
+  width: 300px;
+  padding-top: 2rem;
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+
+.Coffeebuy .box_container .box .right_box .content .prd_btn_box #buy2btn{
+  width: 290px;
+  padding-top: 2rem;
+  margin: 0.5rem;
+  font-size: 2rem;
+}
+
+.Coffeebuy .box_container .box .right_box  .line_prd{
+  width: 90%;
+}
+
+.Coffeebuy .box_container .box .right_box  .Mugfree{
+  height: 8vh;
+  margin-left: 2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol{
+width: 100%;
+height: 10vh;
+/* background-color: #f89aae; */
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1{
+width: 100%;
+height: 10vh;
+/* background-color: #9af8f8; */
+z-index: -999;
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1 p{
+font-size: 2rem;
+font-weight: bold;
+color: rgb(102, 36, 36);
+margin-left: -10rem;
+}
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1 #parcup{
+margin-left: -12rem;
+padding-top: 2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1 #perCup{
+margin-left: -2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1 .det_arrow{
+margin-right: -10rem;
+width: 30px;
+height: 30px;
+background-color: #f6cd90;
+border-radius: 50%;
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1 #arrowcup{
+margin-right: -12rem;
+}
+
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1 #percuparrow{
+margin-right: -2rem;
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow1 .det_arrow i{
+font-size: 1.5rem;
+font-weight: bold;
+color: rgb(102, 36, 36);
+padding-top: 1rem;
+}
+.Coffeebuy .box_container .box .right_box .details_box:hover .detcol .detrow1 .det_arrow{
+background-color: rgb(102, 36, 36);
+}
+
+.Coffeebuy .box_container .box .right_box .details_box:hover .detcol .detrow1 .det_arrow i{
+color: var(--bg);
+} 
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow2{
+width: 70%;
+height: 10vh;
+background-color: brown;
+display: flex;
+align-items: center;
+position: absolute;
+z-index: 999;
+justify-content: space-around;
+display: none;
+/* margin-left: -4rem; */
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow2 p{
+font-size: 2rem;
+font-weight: light;
+color: #fff;
+padding-left: 2rem;
+padding-top: 2rem;
+text-align: left;
+}
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow2 #paradesc{
+font-size: 1rem;
+font-weight: light;
+color: #fff;
+padding-left: 2rem;
+padding-top: 1rem;
+text-align: left;
+}
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow2 #paradesc1{
+font-size: 1.2rem;
+font-weight: light;
+color: #fff;
+padding-left: 2rem;
+padding-top: 1.5rem;
+text-align: left;
+}
+
+
+.Coffeebuy .box_container .box .right_box .details_box .detcol .detrow2 #paradesc #bdesc{
+color: var(--bg);
+font-weight: bold;
+}
+
+.Coffeebuy .box_container .box .right_box .content #buyItwith{
+font-size: 2rem;
+color: brown;
+padding: 0;
+margin-top: 2rem;
+}
+
+
+
+/* ********************* ALL PRODUCTS SECTION ******************** */
+
+.allproducts .allprod_conatiner {
+  width: 100%;
+  height: 30vh;
+  margin-top: -35rem;
+}
+
+
+ /* ********************* BLOg PRODUCTS SECTION ******************** */
+
+ .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: -10rem;
+}
+
+ /* ************************ REVIEWS BUY PAGE ******************* */ 
+ .buyreviews{
+  width: 100%;
+  height: 80vh;
+  /* background-color: greenyellow; */
+ }
+
+.buyreviews .rev_row{
+  flex-direction: column;
+}
+
+.buyreviews  .rev_row  .txt_rev{
+  width: 100%;
+  height: 30vh;
+  text-align: center;
+  border-bottom: 2px solid rgb(102, 36, 36);
+  /* background-color: hotpink; */
+  border-right: 0;
+  padding-top: 10rem;
+  }
+
+.buyreviews  .rev_row  .txt_rev .stars{
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(102, 36, 36);
+  margin-left: -10rem;
+
+}
+
+.buyreviews  .rev_row  .txt_rev .stars #outoff{
+  /* text-decoration: none; */
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(102, 36, 36);
+  /* margin-right: 2rem; */
+  margin-left: 1rem;
+}
+
+.buyreviews  .rev_row  .txt_rev p{
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(102, 36, 36);
+  margin-left: -4rem;
+}
+
+.buyreviews  .rev_row  .txt_rev  a{
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(102, 36, 36);
+  margin-top: -2rem;
+  margin-left: -3rem;
+
+}
+
+.buyreviews  .rev_row  .txt_rev  a:hover{
+  color: brown;
+}
+
+.buyreviews  .rev_row  .stars_rev{
+  width: 100%;
+  height: 30vh;
+  border-bottom: 2px solid rgb(102, 36, 36);
+  /* background-color: red; */
+  border-right: 0;
+  padding-top: 3rem;
+}
+
+/* 2nd row */
+
+.buyreviews  .rev_row  .stars_rev .rev_row1{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 2.5rem;
+  margin-top: -3rem;
+  padding-left: 2rem;
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .stars{
+  margin-right: 2rem;
+  display: flex;
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .stars i{
+  font-size: 2rem;
+  color: rgb(102, 36, 36);
+}
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyMark{
+  background-color: #fff;
+  width: 40%;
+  height: 20px;
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyMark .marklineBuy{
+  width: 80%;
+  height: 20px;
+  background-color: rgb(102, 36, 36);
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyMark #star4{
+  width: 60%;
+  height: 20px;
+  background-color: rgb(102, 36, 36);
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyMark #star3{
+  width: 40%;
+  height: 20px;
+  background-color: rgb(102, 36, 36);
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyMark #star2{
+  width: 20%;
+  height: 20px;
+  background-color: rgb(102, 36, 36);
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyMark #star1{
+  width: 5%;
+  height: 20px;
+  background-color: rgb(102, 36, 36);
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyNum{
+  margin-left: 2rem;
+  padding-top: 1rem;
+}
+
+.buyreviews  .rev_row  .stars_rev .rev_row1 .buyNum{
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(102, 36, 36);
+}
+
+.buyreviews  .rev_row  .msg_rev{
+  width: 100%;
+  height: 30vh;
+  /* background-color: blue; */
+  padding-top: 8rem;
+  padding-left: 1rem;
+}
+
+.buyreviews  .rev_row  .msg_rev #rev_btn{
+  width: 300px;
+  height: 50px;
+  font-size: 2rem;
+  background-color: rgb(102, 36, 36);
+  margin-left: 3rem;
+}
+
+.buyreviews  .rev_row  .msg_rev #rev_btn:hover{
+  background-color: brown;
+}
+
+#buyproducts{
+  margin-top: 2rem;
+}
+
+
+/* ******************************** ADD TO CART ******************************************************** */
+
+.left_side{
+  margin-left: 1rem;
+}
+ 
+ 
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* ***************** FOOTER PAGE *********************** */
+
+@media (max-width: 880px) {
+    .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+}       
+        
+
+@media (max-width: 600px) {
+  .container .box:hover .content {
+    transform: translate(0, 3.5rem);
+  }
+  .container .box:hover .imgBox {
+    transform: translate(0, -3.5rem);
+  }
+}
+

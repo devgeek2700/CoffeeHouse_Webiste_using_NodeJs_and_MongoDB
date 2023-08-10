@@ -1,0 +1,602 @@
+<html lang="en">
+  <head>
+    <title>Coffee House</title>
+
+    {{> headerlinks}}
+
+  </head>
+  <body>
+    <!-- /* ************************ NAVBAR ******************* */ -->
+
+    {{> navbar}}
+    
+  
+        
+    <!-- /* ************************ ADS SECTION ******************* */ -->
+    
+<section class="ad_container">
+ <div class="wrapper">
+  <div class="marquee">
+    <p>
+      Shop our Money Saver Bundles to save some cash!
+    </p>
+    <p>
+      <i class="fa-solid fa-circle"></i>
+    </p>
+    <p>
+      Get a FREE Hustle Mug on orders above ₹2999
+    </p>
+    <p>
+      <i class="fa-solid fa-circle"></i>
+    </p>
+    <p>
+      Ft. coffee House
+    </p>
+    <p>
+      <i class="fa-solid fa-circle"></i>
+    </p>
+    <p>
+      {{username}}
+    </p>
+  </div>
+</div>
+</section>
+    {{!-- {{> movingads}} --}}
+
+
+
+    <!-- /* ************************ MAIN PAGE ******************* */ -->
+
+    <section class="Home" id="home">
+      <div class="content">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="Images/ban1.webp"
+                width="100%"
+                height="500px"
+                class="ban_img"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="Images/ban2.webp"
+                width="100%"
+                height="500px"
+                class="ban_img"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="Images/ban5.webp"
+                width="100%"
+                height="500px"
+                class="ban_img"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="ban_offer">
+        <div class="ban_row">
+          <div class="blk_1">
+            <i class="fa-solid fa-location-dot" class="home_icon"></i>
+            <span>Made In India</span>
+          </div>
+
+          <div class="blk_1">
+            <i class="fa-solid fa-mug-hot" class="home_icon"></i>
+            <span>100% Pure Coffee</span>
+          </div>
+
+          <div class="blk_1">
+            <i class="fa-solid fa-leaf" class="home_icon"></i>
+            <span>USDA Organic Flavouring</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /* ************************ ABOUT PAGE ******************* */ -->
+
+    <section class="About" id="about">
+      <h1 class="heading"><span>About</span> Us</h1>
+
+      <div class="row">
+        <div class="abt_img">
+          <img src="Images/about1.jpg" alt="about" />
+        </div>
+
+        <div class="content">
+          <h3>what makes our coffee so special?</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto ipsa
+            omnis error harum, architecto dicta suscipit quasi quisquam
+            exercitationem ex? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Fuga, velit?
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit cum
+            non nemo esse recusandae! Aut doloribus maxime quod corporis dolor.
+          </p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- /* ************************ MENU PAGE ******************* */ -->
+
+    <section class="Menu" id="menu">
+      <h1 class="heading"><span>The</span> Menu</h1>
+
+      <div class="row">
+        <div class="menu_img">
+          <iframe
+            width="560"
+            height="400"
+            src="https://www.youtube.com/embed/rABfboy0h6o"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="menu_img1">
+          <img src="Images/menu1.webp" alt="menu" />
+
+          <div class="menu_img_box">
+            <img src="Images/menu4.jpg" alt="menu" />
+
+            <img src="Images/menu2.webp" alt="menu" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /* ************************ PRODUCTS PAGE ******************* */ -->
+
+    <section class="products" id="products">
+      <h1 class="heading"><span>The</span> Products</h1>
+
+      <div class="box_container">
+        <div class="box">
+          <div class="prd_icons">
+            <a href="/AddtoCart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#"><i class="fa-regular fa-heart" id= "heartBtnh1"></i></a>
+            <a href="/Mocha"><i class="fa-regular fa-eye"></i></a>
+          </div>
+
+          <div class="prd_image">
+            <img src="Images/prd1.webp" alt="product" id="cartImgInput">
+          </div>
+
+          <div class="content">
+            <h3 id="cartTitleInput">Mocha pe Chauka Premium Instant Coffee 100gms</h3>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+
+            <div class="price" id="cartPriceInput">Rs. 699.00 <span>Rs. 798.00</span></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="prd_icons">
+            <a href="/AddtoCart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#"><i class="fa-regular fa-heart  " id= "heartBtnh2"></i></a>
+            <a href="/Vichaar"><i class="fa-regular fa-eye"></i></a>
+          </div>
+
+          <div class="prd_image">
+            <img src="Images/prd2.webp" alt="product" />
+          </div>
+
+          <div class="content">
+            <h3>Vichaar Over Vanilla Premium Instant Coffee 100 gms</h3>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+
+            <div class="price">Rs. 599.00 <span>Rs. 798.00</span></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="prd_icons">
+            <a href="/AddtoCart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href=""><i class="fa-regular fa-heart" id= "heartBtnh3"></i></a>
+            <a href="/Raat"><i class="fa-regular fa-eye"></i></a>
+          </div>
+
+          <div class="prd_image">
+            <img src="Images/prd3.webp" alt="product" />
+          </div>
+
+          <div class="content">
+            <h3>Raat ki Rani Espresso Premium Instant Coffee 100gms</h3>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+
+            <div class="price">Rs. 799.00 <span>Rs. 798.00</span></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="prd_icons">
+            <a href="/AddtoCart"><i class="fa-solid fa-cart-shopping" ></i></a>
+            <a href=""><i class="fa-regular fa-heart" id= "heartBtnh4"></i></a>
+            <a href="/Raat"><i class="fa-regular fa-eye"></i></a>
+          </div>
+
+          <div class="prd_image">
+            <img src="Images/prd14.webp" alt="product" />
+          </div>
+
+          <div class="content">
+            <h3>
+              Impulse Hustlers Favourite Combo | Mocha pe Chauka 100 gms +
+              Vichaar Over Vanilla 50 gms + NutKhat Hazelnut 50 gms
+            </h3>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+
+            <div class="price">Rs. 899.00 <span>Rs. 798.00</span></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="prd_icons">
+            <a href="/AddtoCart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href=""><i class="fa-regular fa-heart" id= "heartBtnh5"></i></a>
+            <a href="/NutKhat"><i class="fa-regular fa-eye"></i></a>
+          </div>
+
+          <div class="prd_image">
+            <img src="Images/prd5.webp" alt="product" />
+          </div>
+
+          <div class="content">
+            <h3>NutKhat Hazelnut Premium Instant Coffee</h3>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+
+            <div class="price">Rs. 399.00 <span>Rs. 498.00</span></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="prd_icons">
+            <a href="/AddtoCart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href=""><i class="fa-regular fa-heart" id= "heartBtnh6"></i></a>
+            <a href="/NutKhat"><i class="fa-regular fa-eye"></i></a>
+          </div>
+
+          <div class="prd_image">
+            <img src="Images/prd6.webp" alt="product" />
+          </div>
+
+          <div class="content">
+            <h3>
+              Keep Calm with KACCHA AAM Premium Instant Coffee | Limited Edition
+            </h3>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+
+            <div class="price">Rs. 599.00 <span>Rs. 998.00</span></div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="prd_icons">
+            <a href="/AddtoCart"><i class="fa-solid fa-cart-shopping" ></i></a>
+            <a href=""><i class="fa-regular fa-heart" id= "heartBtnh7"></i></a>
+            <a href="/Mocha"><i class="fa-regular fa-eye"></i></a>
+          </div>
+
+          <div class="prd_image">
+            <img src="Images/prd7.webp" alt="product" />
+          </div>
+
+          <div class="content">
+            <h3>
+              Pyaarbhari Chocolate Raspberry Premium Instant Coffee 100gms
+            </h3>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+
+            <div class="price">Rs. 469.00 <span>Rs. 898.00</span></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="prd_icons">
+            <a href="/AddtoCart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href=""><i class="fa-regular fa-heart" id= "heartBtnh8"></i></a>
+            <a href="/Vichaar"><i class="fa-regular fa-eye"></i></a>
+          </div>
+
+          <div class="prd_image">
+            <img src="Images/prd8.webp" alt="product" />
+          </div>
+
+          <div class="content">
+            <h3>
+              Nutty Coffee Combo | Mocha pe Chauka 50 gms + Nutkhat Hazelnut 50
+              gms
+            </h3>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+
+            <div class="price">Rs. 699.00 <span>Rs. 898.00</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /* ************************ REVIEWS PAGE ******************* */ -->
+
+    <section class="reviews" id="reviews">
+      <h1 class="heading"><span>The</span> Testimonials</h1>
+
+      <div class="box_container">
+        <div class="box">
+          <img src="Images/astrpote.png" alt="reviews" class="quote" />
+
+          <p>
+            Feels so premium! Not just the packaging but the taste itself is a
+            10/10 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+            quaerat maiores nisi a illum sapiente libero! At suscipit assumenda
+            quaerat odit totam esse dolorum porro enim debitis consequatur! Aut,
+            maiores!
+          </p>
+          <img src="Images/pic1.png" alt="reviews" class="user" />
+          <h3>Lina Mark</h3>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img src="Images/astrpote.png" alt="reviews" class="quote" />
+
+          <p>
+            Feels so premium! Not just the packaging but the taste itself is a
+            10/10 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+            quaerat maiores nisi a illum sapiente libero! At suscipit assumenda
+            quaerat odit totam esse dolorum porro enim debitis consequatur! Aut,
+            maiores!
+          </p>
+          <img src="Images/pic2.png" alt="reviews" class="user" />
+          <h3>John Deo</h3>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img src="Images/astrpote.png" alt="reviews" class="quote" />
+
+          <p>
+            Feels so premium! Not just the packaging but the taste itself is a
+            10/10 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+            quaerat maiores nisi a illum sapiente libero! At suscipit assumenda
+            quaerat odit totam esse dolorum porro enim debitis consequatur! Aut,
+            maiores!
+          </p>
+          <img src="Images/pic3.png" alt="reviews" class="user" />
+          <h3>Tina Hu</h3>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /* ************************ BLOG PAGE ******************* */ -->
+
+    <section class="blog" id="blog">
+      <h1 class="heading"><span>Blog</span> posts</h1>
+
+      <div class="box_container">
+        <div class="box">
+          <div class="blg_img">
+            <img src="Images/blog1.jpg" alt="blog" />
+          </div>
+
+          <div class="content">
+            <h3>2 Spanish style coffee recipes ft. Coffee House</h3>
+            <div class="para">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
+                cumque fuga vitae, non eos recusandae sint, autem delectus
+                necessitatibus blanditiis eaque unde facilis, sit velit! Aliquam
+                dolor cupiditate tempora beatae?Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit. Laudantium placeat voluptatem qui
+                inventore nesciunt ab molestias iure, ipsum sapiente optio?
+              </p>
+            </div>
+
+            <div class="datenow">
+              <i class="fa-regular fa-calendar"></i><span>Jul 4, 2023</span>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="blg_img">
+            <img src="Images/blog2.webp" alt="blog" />
+          </div>
+
+          <div class="content">
+            <h3>3 ways to reuse empty Coffees House jars!</h3>
+            <div class="para">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
+                cumque fuga vitae, non eos recusandae sint, autem delectus
+                necessitatibus blanditiis eaque unde facilis, sit velit! Aliquam
+                dolor cupiditate tempora beatae?Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit. Laudantium placeat voluptatem qui
+                inventore nesciunt ab molestias iure, ipsum sapiente optio?
+              </p>
+            </div>
+
+            <div class="datenow">
+              <i class="fa-regular fa-calendar"></i><span>Jan 18, 2023</span>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="blg_img">
+            <img src="Images/blog3.jpg" alt="blog" />
+          </div>
+
+          <div class="content">
+            <h3>A delicious smoothie recipe with coffee ft. Coffee House</h3>
+            <div class="para">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
+                cumque fuga vitae, non eos recusandae sint, autem delectus
+                necessitatibus blanditiis eaque unde facilis, sit velit! Aliquam
+                dolor cupiditate tempora beatae?Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit. Laudantium placeat voluptatem qui
+                inventore nesciunt ab molestias iure, ipsum sapiente optio?
+              </p>
+            </div>
+
+            <div class="datenow">
+              <i class="fa-regular fa-calendar"></i><span>Mar 27, 2023</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /* ************************ DELVERY PAGE ******************* */ -->
+
+    <section class="Delivery" id="delivery">
+      <h1 class="heading"><span>Our</span> Delivery</h1>
+
+      <div class="box_container">
+        <div class="box">
+          <div class="content">
+            <i class="fa-solid fa-headphones"></i>
+            <h3>Online Support</h3>
+            <p>Contact us for any query from Monday to Friday, 7am - 12pm</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="content">
+            <i class="fa-solid fa-mug-saucer"></i>
+            <h3>COD Available</h3>
+            <p>Cash on Delivery available across India for just ₹100</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="content">
+            <i class="fa-solid fa-plane-departure"></i>
+            <h3>Pan India Delivery</h3>
+            <p>We deliver pan India in 4-8 business days</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <!-- /* ************************ FOOTER PAGE ******************* */ -->
+
+    {{> footer}}
+
+
+    <script src="Js/main.js"></script>
+  </body>
+</html>
