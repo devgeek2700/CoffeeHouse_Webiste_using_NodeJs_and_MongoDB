@@ -114,19 +114,19 @@ app.get("/", (req, res) =>{
     res.render('index');
 });
 
-app.get("/Mocha",authenticate, (req, res) =>{
+app.get("/Mocha", (req, res) =>{
     res.render('Mocha');
 });
 
-app.get("/Vichaar",authenticate, (req, res) =>{
+app.get("/Vichaar", (req, res) =>{
     res.render('Vichaar');
 });
 
-app.get("/Raat",authenticate, (req, res) =>{
+app.get("/Raat", (req, res) =>{
     res.render('Raat');
 });
 
-app.get("/NutKhat",authenticate, (req, res) =>{
+app.get("/NutKhat", (req, res) =>{
     res.render('NutKhat');
 });
 
