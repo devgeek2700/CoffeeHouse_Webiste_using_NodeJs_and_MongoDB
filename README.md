@@ -25,7 +25,6 @@ Before you begin, ensure you have the following installed:
 
 - Node.js: [Download and Install Node.js](https://nodejs.org/)
 - Express.js: [Download and Install Express.js](https://www.npmjs.com/package/express)
-- Mongoose.js: [Download and Install Mongoose.js](https://www.npmjs.com/package/mongoose)
 - MongoDB: [Download and Install MongoDB](https://www.mongodb.com/try/download/community)
 
 ## Technologies/Dependencies Used
