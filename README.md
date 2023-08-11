@@ -1,4 +1,4 @@
-# CoffeeHouse_Webiste_using_NodeJs_and_MongoDB
+# Responsive_CoffeeHouse_Webiste_using_NodeJs_and_MongoDB
 
 
 I have developed a dynamic and engaging coffee website using a robust tech stack comprising Node.js, Express.js, and MongoDB. This web application provides an immersive platform for coffee enthusiasts to explore a wide range of coffee products. Leveraging the power of Node.js and Express.js, the website offers seamless navigation, user registration, and authentication functionalities. MongoDB serves as the backend database, ensuring efficient data storage and retrieval for user profiles. With its user-friendly interface and responsive design, the website caters to both desktop and mobile users. Whether you're browsing through aromatic coffee blends or view cart for a smooth experience, the website offers an enjoyable journey for coffee lovers. 
