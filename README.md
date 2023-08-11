@@ -81,7 +81,7 @@ Before you begin, ensure you have the following installed:
 
 ![App Screenshot](https://github.com/devgeek2700/CoffeeHouse_Webiste_using_NodeJs_and_MongoDB/blob/master/public/Output/cart.png?raw=true)
 
-## Billing Ppage
+## Billing Page
 
 ![App Screenshot](https://github.com/devgeek2700/CoffeeHouse_Webiste_using_NodeJs_and_MongoDB/blob/master/public/Output/bill.png?raw=true)
 
